@@ -27,7 +27,7 @@
 
         public int GetThreeHeight()
         {
-            return threeLines.Length / GetThreeLength();
+            return threeLines.GetLength(1);
         }
     }
 }

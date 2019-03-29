@@ -17,7 +17,7 @@
 
         public int GetHeight()
         {
-            return threeByThree.Length / GetLength();
+            return threeByThree.GetLength(1);
         }
     }
 }

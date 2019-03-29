@@ -8,6 +8,8 @@ namespace DynamicArrays
         static void Main(string[] args)
         {
             Dog Rocky = new Dog("Rocky", 2);
+            Rocky.Bark(2);
+            Console.WriteLine();
 
             int[] simpleArray = new int[] { 8, 10, 30 };
             ArrayList firstList = new ArrayList(); // Attention!
@@ -22,14 +24,14 @@ namespace DynamicArrays
             // Here we can no longer add simpleArray elements separately, but only can add the array simpleArray itself as an element of the collection:
             ArrayList secondList = new ArrayList() { "Hello, World!", 5, 10.2, Rocky, simpleArray };
 
-            Console.WriteLine("Decomposing the firstList collection by type:\n");
+            Console.WriteLine("Enumeration of firstList collection by type:\n");
             foreach (object i in firstList)
             {
                 Console.WriteLine(i.GetType());
             }
             Console.WriteLine("\nCount of elements in the collection: " + firstList.Count);
 
-            Console.WriteLine("\nDecomposing the secondList collection by type:\n");
+            Console.WriteLine("\nEnumeration of secondList collection by type:\n");
             foreach (object i in secondList)
             {
                 Console.WriteLine(i.GetType());
