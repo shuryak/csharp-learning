@@ -62,7 +62,7 @@
 
 Данный зубчатый массив можно представить так:
 
-<img src="https://psv4.userapi.com/c848120/u493075750/docs/d2/33e6e35f80d2/jagged-md.gif"/>
+<img src="https://github.com/shuryak/csharp-learning/blob/master/Images%20for%20README/jagged-md.gif?raw=true">
 
 Для создания зубчатого массива многомерных массивов нужно во вторых скобках в инициализации поставить запятые, как при объявлении многомерного массива.
 
