@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerable and IEnumerator", "IEnumerable and IEnumerator\IEnumerable and IEnumerator.csproj", "{DF5179A8-A3A0-471C-B359-66CB7DCD2312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF5179A8-A3A0-471C-B359-66CB7DCD2312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5179A8-A3A0-471C-B359-66CB7DCD2312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5179A8-A3A0-471C-B359-66CB7DCD2312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5179A8-A3A0-471C-B359-66CB7DCD2312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82C3A641-6ABE-4FCD-B190-AA96F849D2CE}
+	EndGlobalSection
+EndGlobal
