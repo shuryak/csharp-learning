@@ -1,15 +1,22 @@
-﻿
-
-# Динамические массивы (ArrayList)
+﻿# Динамические массивы (ArrayList)
 
 В C# динамические массивы представлены классом ArrayList, находящимся в пространстве имён `System.Collection`. Этот класс представляет собой коллекцию различных объектов типа `Object`, соответственно динамические массивы в C# являются *нетипизированными*. Реализует интерфейсы `ICollection`, `IEnumerable`, `IList`, `ICloneable`.
 
 ## Создание динамического массива:
 
- 1. Создаём объект класса ArrayList через конструктор: `ArrayList myList = new ArrayList();`;
- 2. Добавляем элементы в коллекцию с помощью метода `Add()`: `myList.Add(1); myList.Add("hello"); myList.Add(3);`.
+ 1. Создаём объект класса ArrayList через конструктор:
+	```csharp
+	ArrayList myList = new ArrayList();
+	```
+ 3. Добавляем элементы в коллекцию с помощью метода `Add()`:
+	```csharp
+	myList.Add(1); myList.Add("hello"); myList.Add(3);
+	```
 
-Или можно сразу выполнить инициализацию коллекции: `ArrayList myList = new ArrayList(){1, "hello",  3};`
+Или можно сразу выполнить инициализацию коллекции:
+```csharp
+ArrayList myList = new ArrayList(){1, "hello",  3};
+```
 
 ## Полезные свойства класса ArrayList:
 
@@ -35,8 +42,10 @@
 
 Поскольку ArrayList реализует интерфейс IEnumerable, его можно перебирать с помощью foreach:
 
-    foreach(object i in myList){
-	    Console.WriteLine(i.GetType());
-    }
+```csharp
+foreach(object i in myList){
+	Console.WriteLine(i.GetType());
+}
+```
 
 Стоит обратить внимание на то, что переменная `i` должна быть типа `object`.

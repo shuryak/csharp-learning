@@ -1,19 +1,21 @@
-# Зубчатые массивы
+﻿# Зубчатые массивы
 
 *Зубчатые массивы* (*невыровненные массивы*, *массивы массивов*) – это массивы, хранящие другие массивы. Невыровненными их называют, потому что они могут хранить массивы с разной длиной, например под индексом 1 может храниться массив длиной 3, под индексом 2 – массив длиной 10 и т.д. Графическое представление зубчатого массива:
 
-![Графическое представление зубчатого массива.](https://s8.hostingkartinok.com/uploads/images/2019/03/e643e43182c5336fff11cf11b09eba48.png)
+![Графическое представление зубчатого массива.](https://github.com/shuryak/csharp-learning/blob/master/Images%20for%20README/jagged.png?raw=true)
 
 ## Создание зубчатых массивов
 
 Пример зубчатого массива (с изображения выше):
 
-    int[][] jagged = new int[5][];
-    jagged[0] = new int[4] { 1, 2, 3, 4 };
-    jagged[1] = new int[3] { 5, 6, 7 };
-    jagged[2] = new int[2] { 8, 9 };
-    jagged[3] = new int[7] { 10, 11, 12, 13, 14, 15, 16 };
-    jagged[4] = new int[4] { 17, 18, 19, 20 };
+```csharp
+int[][] jagged = new int[5][];
+jagged[0] = new int[4] { 1, 2, 3, 4 };
+jagged[1] = new int[3] { 5, 6, 7 };
+jagged[2] = new int[2] { 8, 9 };
+jagged[3] = new int[7] { 10, 11, 12, 13, 14, 15, 16 };
+jagged[4] = new int[4] { 17, 18, 19, 20 };
+```
 
 Две группы квадратных скобок определяют, что это зубчатый массив (массив, содержащий в себе другие массивы). Размер массива указывается в первых квадратных скобках после инициализации: `new int[5][]` – значит, зубчатый массив целых чисел,  размер которого 5 (5 целочисленных массивов могут хранится в этом зубчатом массиве).
 
@@ -21,77 +23,88 @@
 
 Есть массив:
 
-    int[][] myArray = new int[4][];
-    myArray[0] = new int[2] { 1, 2 };
-    myArray[1] = new int[3] { 1, 2, 3 };
-    myArray[2] = new int[5] { 1, 2, 3, 4, 5 };
-    myArray[3] = new int[2] { 1, 2 };
+```csharp
+int[][] myArray = new int[4][];
+myArray[0] = new int[2] { 1, 2 };
+myArray[1] = new int[3] { 1, 2, 3 };
+myArray[2] = new int[5] { 1, 2, 3, 4, 5 };
+myArray[3] = new int[2] { 1, 2 };
+```
 
 Перебор с помощью foreach:
 
-    foreach (int[] i in myArray)
-    {
-	    foreach (int j in i)
-	    {
-		    Console.Write(j + "\t");
-	    }
-	    Console.WriteLine();
-    }
+```csharp
+foreach (int[] i in myArray)
+{
+	foreach (int j in i)
+	{
+		Console.Write(j + "\t");
+	}
+	Console.WriteLine();
+}
+```
 
 Аналогичный перебор с помощью for:
 
-    for (int i = 0; i < myArray.Length; i++)
-    {
-	    for (int j = 0; j < myArray[i].Length; j++)
-	    {
-		    Console.Write($"{myArray[i][j]} \t");
-	    }
-	    Console.WriteLine();
-    }
+```csharp
+for (int i = 0; i < myArray.Length; i++)
+{
+	for (int j = 0; j < myArray[i].Length; j++)
+	{
+		Console.Write($"{myArray[i][j]} \t");
+	}
+	Console.WriteLine();
+}
+```
 
 ## Многомерные массивы в качестве элементов зубчатых массивов
 
 Зубчатые массивы могут хранить и многомерные массивы:
 
-	int[][,] myArray = new int[3][,]
-    {
-	    new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } },
-	    new int[2, 2] { { 9, 10 }, { 11, 12 } },
-	    new int[3, 2] { { 13, 14 }, { 15, 16 }, { 17, 18 } }
-    };
+```csharp
+int[][,] myArray = new int[3][,]
+{
+	new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } },
+	new int[2, 2] { { 9, 10 }, { 11, 12 } },
+	new int[3, 2] { { 13, 14 }, { 15, 16 }, { 17, 18 } }
+};
+```
 
 Данный зубчатый массив можно представить так:
 
-<img src="https://github.com/shuryak/csharp-learning/blob/master/Images%20for%20README/jagged-md.gif?raw=true">
+![Зубчатый массив, элементы которого представлены многомерными массивами.](https://github.com/shuryak/csharp-learning/blob/master/Images%20for%20README/jagged-md.gif?raw=true)
 
 Для создания зубчатого массива многомерных массивов нужно во вторых скобках в инициализации поставить запятые, как при объявлении многомерного массива.
 
 ### Перебор зубчатого массива, элементами которого являются многомерные массивы:
 
-    for (int i = 0; i < myArray.GetUpperBound(0) + 1; i++)
-    {
-	    Console.WriteLine($"int[{myArray[i].GetUpperBound(0) + 1}, {myArray[i].GetUpperBound(1) + 1}]:");
-	    for (int j = 0; j < myArray[i].GetUpperBound(0) + 1; j++)
-	    {
-		    for (int k = 0; k < myArray[i].GetUpperBound(1) + 1; k++)
-		    {
-			    Console.Write(myArray[i][j, k] + "\t");
-		    }
-		    Console.WriteLine();
-	    }
-	    Console.WriteLine();
-    }
-
+```csharp
+for (int i = 0; i < myArray.GetUpperBound(0) + 1; i++)
+{
+	Console.WriteLine($"int[{myArray[i].GetUpperBound(0) + 1}, {myArray[i].GetUpperBound(1) + 1}]:");
+	for (int j = 0; j < myArray[i].GetUpperBound(0) + 1; j++)
+	{
+		for (int k = 0; k < myArray[i].GetUpperBound(1) + 1; k++)
+		{
+			Console.Write(myArray[i][j, k] + "\t");
+		}
+		Console.WriteLine();
+	}
+	Console.WriteLine();
+}
+```
 
 ### Сокращённый способ перебора зубчатого массива, элементами которого являются многомерные массивы, с помощью foreach:
 
 Данный способ лишь построчно выводит элементы многомерных массивов, включённых в зубчатый массив (каждый массив с новой строки):
 
-    foreach (int[,] i in myArray)
-    {
-	    foreach (int j in i)
-	    {
-		    Console.Write(j + "\t");
-	    }
-	    Console.WriteLine();
-    };
+```csharp
+foreach (int[,] i in myArray)
+{
+	foreach (int j in i)
+	{
+		Console.Write(j + "\t");
+	}
+	Console.WriteLine();
+};
+```
