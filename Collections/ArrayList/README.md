@@ -6,11 +6,11 @@
 
  1. Создаём объект класса ArrayList через конструктор:
 	```csharp
-	ArrayList myList = new ArrayList();
+    ArrayList myList = new ArrayList();
 	```
- 3. Добавляем элементы в коллекцию с помощью метода `Add()`:
+ 2. Добавляем элементы в коллекцию с помощью метода `Add()`:
 	```csharp
-	myList.Add(1); myList.Add("hello"); myList.Add(3);
+    myList.Add(1); myList.Add("hello"); myList.Add(3);
 	```
 
 Или можно сразу выполнить инициализацию коллекции:
@@ -44,7 +44,7 @@ ArrayList myList = new ArrayList(){1, "hello",  3};
 
 ```csharp
 foreach(object i in myList){
-	Console.WriteLine(i.GetType());
+    Console.WriteLine(i.GetType());
 }
 ```
 

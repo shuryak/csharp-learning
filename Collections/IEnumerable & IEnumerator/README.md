@@ -8,7 +8,7 @@
 ```csharp
 public interface IEnumerable
 {
-	IEnumerator GetEnumerator() { ... } // метод, возвращающий интерфейс IEnumerator
+    IEnumerator GetEnumerator() { ... } // метод, возвращающий интерфейс IEnumerator
 }
 ```
 
@@ -17,9 +17,9 @@ public interface IEnumerable
 ```csharp
 public interface IEnumerator
 {
-	object Current { get; }
-	bool MoveNext();
-	void Reset();
+    object Current { get; }
+    bool MoveNext();
+    void Reset();
 }
 ```
 
@@ -34,31 +34,31 @@ public interface IEnumerator
 ```csharp
 class Person
 {
-	public string Firstname { get; set; }
-	public string Lastname { get; set; }
-	
-	public Person(string firstname, string lastname)
-	{
-		Firstname = firstname;
-		Lastname = lastname;
-	} 
+    public string Firstname { get; set; }
+    public string Lastname { get; set; }
+    
+    public Person(string firstname, string lastname)
+    {
+        Firstname = firstname;
+        Lastname = lastname;
+    } 
 
-	ArrayList Childrens = new ArrayList();
-	
-	public void AddChild(string firstname, string lastname)
-	{
-		Childrens.Add(new Person(firstname, lastname));
-	}
-	
-	public int GetChildrenCount()
-	{
-		return Childrens.Count;
-	}
-	
-	public Person this[int index]
-	{
-		get { return (Person)Childrens[index];  }
-	}
+    ArrayList Childrens = new ArrayList();
+    
+    public void AddChild(string firstname, string lastname)
+    {
+        Childrens.Add(new Person(firstname, lastname));
+    }
+    
+    public int GetChildrenCount()
+    {
+        return Childrens.Count;
+    }
+    
+    public Person this[int index]
+    {
+        get { return (Person)Childrens[index];  }
+    }
 }
 ```
 
@@ -71,7 +71,7 @@ Vasiliy.AddChild("Светлана", "Иванова");
 
 foreach (Person children in Vasiliy.Childrens)
 {
-	Console.WriteLine(children.Firstname + " " + children.Lastname);
+    Console.WriteLine(children.Firstname + " " + children.Lastname);
 }
 ```
 
@@ -85,7 +85,7 @@ foreach (Person children in Vasiliy.Childrens)
 ```csharp
 public IEnumerator GetEnumerator()
 {
-	return Childrens.GetEnumerator();
+    return Childrens.GetEnumerator();
 }
 ```
 
@@ -96,37 +96,37 @@ public IEnumerator GetEnumerator()
 ```csharp
 class PersonEnumerator: IEnumerator
 {
-	int currentIndex = -1; // начальное положение перечислителя – перед первым элементом коллекции.
-	Person person; // свойство типа Person
-	
-	public PersonEnumerator(Person person) // конструктор
-	{
-		this.person = person;
-	}
-	
-	// далее – члены IEnumerator
-	public object Current
-	{
-		get { return person[currentIndex]; }
-	}
-	
-	public bool MoveNext()
-	{
-		currentIndex++;
-		if(currentIndex >= person.GetChildrenCount())
-		{
-			return false;
-		}
-		else
-		{
-			return true;
-		}
-	}
+    int currentIndex = -1; // начальное положение перечислителя – перед первым элементом коллекции.
+    Person person; // свойство типа Person
+    
+    public PersonEnumerator(Person person) // конструктор
+    {
+        this.person = person;
+    }
+    
+    // далее – члены IEnumerator
+    public object Current
+    {
+        get { return person[currentIndex]; }
+    }
+    
+    public bool MoveNext()
+    {
+        currentIndex++;
+        if(currentIndex >= person.GetChildrenCount())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
-	public void Reset()
-	{
-		currentIndex = -1;
-	}
+    public void Reset()
+    {
+        currentIndex = -1;
+    }
 }
 ```
 
@@ -137,7 +137,7 @@ class PersonEnumerator: IEnumerator
 ```csharp
 public IEnumerator GetEnumerator()
 {
-	return new PersonEnumerator(this);
+    return new PersonEnumerator(this);
 }
 ```
 
@@ -146,7 +146,7 @@ public IEnumerator GetEnumerator()
 ```csharp
 foreach (Person children in Vasiliy)
 {
-	Console.WriteLine(children.Firstname + " " + Vasiliy.Lastname);
+    Console.WriteLine(children.Firstname + " " + Vasiliy.Lastname);
 }
 ```
 

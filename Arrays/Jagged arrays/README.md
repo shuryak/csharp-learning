@@ -36,11 +36,11 @@ myArray[3] = new int[2] { 1, 2 };
 ```csharp
 foreach (int[] i in myArray)
 {
-	foreach (int j in i)
-	{
-		Console.Write(j + "\t");
-	}
-	Console.WriteLine();
+    foreach (int j in i)
+    {
+        Console.Write(j + "\t");
+    }
+    Console.WriteLine();
 }
 ```
 
@@ -49,11 +49,11 @@ foreach (int[] i in myArray)
 ```csharp
 for (int i = 0; i < myArray.Length; i++)
 {
-	for (int j = 0; j < myArray[i].Length; j++)
-	{
-		Console.Write($"{myArray[i][j]} \t");
-	}
-	Console.WriteLine();
+    for (int j = 0; j < myArray[i].Length; j++)
+    {
+        Console.Write($"{myArray[i][j]} \t");
+    }
+    Console.WriteLine();
 }
 ```
 
@@ -64,9 +64,9 @@ for (int i = 0; i < myArray.Length; i++)
 ```csharp
 int[][,] myArray = new int[3][,]
 {
-	new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } },
-	new int[2, 2] { { 9, 10 }, { 11, 12 } },
-	new int[3, 2] { { 13, 14 }, { 15, 16 }, { 17, 18 } }
+    new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } },
+    new int[2, 2] { { 9, 10 }, { 11, 12 } },
+    new int[3, 2] { { 13, 14 }, { 15, 16 }, { 17, 18 } }
 };
 ```
 
@@ -81,16 +81,16 @@ int[][,] myArray = new int[3][,]
 ```csharp
 for (int i = 0; i < myArray.GetUpperBound(0) + 1; i++)
 {
-	Console.WriteLine($"int[{myArray[i].GetUpperBound(0) + 1}, {myArray[i].GetUpperBound(1) + 1}]:");
-	for (int j = 0; j < myArray[i].GetUpperBound(0) + 1; j++)
-	{
-		for (int k = 0; k < myArray[i].GetUpperBound(1) + 1; k++)
-		{
-			Console.Write(myArray[i][j, k] + "\t");
-		}
-		Console.WriteLine();
-	}
-	Console.WriteLine();
+    Console.WriteLine($"int[{myArray[i].GetUpperBound(0) + 1}, {myArray[i].GetUpperBound(1) + 1}]:");
+    for (int j = 0; j < myArray[i].GetUpperBound(0) + 1; j++)
+    {
+        for (int k = 0; k < myArray[i].GetUpperBound(1) + 1; k++)
+        {
+            Console.Write(myArray[i][j, k] + "\t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
 ```
 
@@ -101,10 +101,10 @@ for (int i = 0; i < myArray.GetUpperBound(0) + 1; i++)
 ```csharp
 foreach (int[,] i in myArray)
 {
-	foreach (int j in i)
-	{
-		Console.Write(j + "\t");
-	}
-	Console.WriteLine();
+    foreach (int j in i)
+    {
+        Console.Write(j + "\t");
+    }
+    Console.WriteLine();
 };
 ```

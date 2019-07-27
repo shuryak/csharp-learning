@@ -45,15 +45,15 @@ int[,,] myArray = new int[2, 4, 3];
    int[,] Array2D = new int[3, 2];
    ```
 	Чтобы заполнить массив числами от 1 до 6, инициализированный таким образом, можно воспользоваться циклами:
-	
+    
 	```csharp
 	for (int i = 0; i < Array2D.GetLength(0); i++)
-	{
-		for (int j = 0; j < Array2D.Length / Array2D.GetLength(0); j++)
-		{
-			Array2D[i, j] = v;
-			v++;
-		}
+    {
+        for (int j = 0; j < Array2D.Length / Array2D.GetLength(0); j++)
+        {
+            Array2D[i, j] = v;
+            v++;
+        }
 	}
 	```
 
@@ -77,9 +77,9 @@ int[,,] myArray = new int[2, 4, 3];
 ```csharp
 int[,] myArray = new int[3, 4]
 {
-	{ 1, 2, 3, 4 },
-	{ 5, 6, 7, 8 },
-	{ 9, 10, 11, 12 }
+    { 1, 2, 3, 4 },
+    { 5, 6, 7, 8 },
+    { 9, 10, 11, 12 }
 }; // Фигурные скобки в несколько строк для удобства
 ```
 
@@ -110,9 +110,9 @@ Console.WriteLine(myArray[0, 0]);
 ```csharp
 int[,] myArray = new int[3, 4]
 {
-	{ 1, 2, 3, 4 },
-	{ 5, 6, 7, 8 },
-	{ 9, 10, 11, 12 }
+    { 1, 2, 3, 4 },
+    { 5, 6, 7, 8 },
+    { 9, 10, 11, 12 }
 };
 ```
 
@@ -132,11 +132,10 @@ int[,] myArray = new int[3, 4]
 ```csharp
 for (int i = 0; i < myArray.GetUpperBound(0) + 1; i++)
 {
-	for (int j = 0; j < (myArray.GetUpperBound(1) + 1); j++)
-	{
-		Console.Write(myArray[i, j] + "\t");
-	}
-	Console.WriteLine();
+    for (int j = 0; j < (myArray.GetUpperBound(1) + 1); j++)
+    {
+        Console.Write(myArray[i, j] + "\t");
+    }
+    Console.WriteLine();
 }
 ```
-
