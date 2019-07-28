@@ -1,4 +1,4 @@
-﻿## Интерфейсы IEnumerable и IEnumerator
+﻿# Интерфейсы IEnumerable и IEnumerator
 
 Чтобы использовать возможность перебирать класс в операторе цикла `foreach`, нужно, чтобы этот класс реализовывал интерфейс `IEnumerable`. Интерфейс `IEnumerable` имеет метод `GetEnumerator()`, возвращающий *ссылку на другой интерфейс* --- перечислитель `IEnumerator`:
 
@@ -6,9 +6,9 @@
 > [Источник](https://stackoverflow.com/questions/619564/what-is-the-difference-between-ienumerator-and-ienumerable/)
 
 ```csharp
-public interface IEnumerable
+interface IEnumerable
 {
-    IEnumerator GetEnumerator() { ... } // метод, возвращающий интерфейс IEnumerator
+    IEnumerator GetEnumerator(); // метод, возвращающий интерфейс IEnumerator
 }
 ```
 
