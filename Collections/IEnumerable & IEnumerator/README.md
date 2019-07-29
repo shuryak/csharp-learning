@@ -29,6 +29,30 @@ public interface IEnumerator
 
 Программист имеет полную свободу и может реализовать интерфейс, как ему удобно.
 
+## Перебор массива с помощью IEnumerator без foreach
+
+Чтобы понимать, как `Current`, `MoveNext()`, `Reset()` работают вместе, рассмотрим следующий пример (это перебор массива "вручную", без `foreach`):
+
+```csharp
+int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+    IEnumerator numE = numbers.GetEnumerator(); // получаем IEnumerator для массива numbers
+
+    while (numE.MoveNext()) // пока не будет false
+    {
+        int current = (int)numE.Current; // элемент на текущей позиции сохраняем в переменную current
+        Console.WriteLine(current); // выводим current
+    }
+
+    numE.Reset(); // устанавливаем перечислитель в начальное положение
+
+    Console.ReadLine();
+```
+
+Данный код работает, потому что массивы по умолчанию реализуют интерфейс IEnumerable.
+
+## Реалзация IEnumerable для своих классов
+
 Пусть есть класс `Person`:
 
 ```csharp
@@ -91,7 +115,11 @@ public IEnumerator GetEnumerator()
 
 Мы описали метод `GetEnumerator()` в классе `Person`, который возвращает `IEnumerator` из `Childrens`. `Childrens` — это `ArrayList`, а `ArrayList` реализует интерфейс `IEnumerable`, а значит, в нём описан метод `GetEnumerator()`, возвращающий `IEnumerator`.
 
-Но в данном случае мы используем не свою реализацию интерфейса `IEnumerator`, а уже готовую. Так давайте реализуем свой вариант перечислителя `IEnumerator` и назовём его `PersonEnumerator`:
+Но в данном случае мы используем не свою реализацию интерфейса `IEnumerator`, а уже готовую (ту, которая по умолчанию есть в `ArrayList`).
+
+## Собственная реализация интерфейса IEnumerator:
+
+Давайте реализуем свой вариант перечислителя `IEnumerator` и назовём его `PersonEnumerator`:
 
 ```csharp
 class PersonEnumerator: IEnumerator
