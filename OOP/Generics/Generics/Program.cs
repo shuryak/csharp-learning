@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Generics
 {
@@ -43,7 +39,7 @@ namespace Generics
         }
     }
 
-    public class UniversalArray<T>
+    public class UniversalArray<T> where T : struct // Only for structs (primitives are structures)
     {
         T[] array = new T[10];
         int index = 0;
