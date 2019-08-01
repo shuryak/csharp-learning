@@ -173,6 +173,22 @@ static string sum<T, U>(T value1, U value2)
 }
 ```
 
+## Перегрузка шаблонных методов
+
+Шаблонные методы можно перегружать. Пример:
+
+```csharp
+static string sum<T>(T value1, T value2)
+{
+    return value1.ToString() + value2.ToString();
+}
+
+static string sum<T, U>(T value1, U value2)
+{
+    return value1.ToString() + value2.ToString();
+}
+```
+
 ## Ограничения шаблонов
 
 Шаблоны неопределённого типа полуются слишком универсальными (принимают любые типы данных), это нужно не всегда. Часто бывает лучше ограничиться несколькими типами данных. Это позволяет сделать ключевое слово `where`:
