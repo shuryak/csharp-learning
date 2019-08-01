@@ -178,7 +178,7 @@ static string sum<T, U>(T value1, U value2)
 Шаблоны неопределённого типа полуются слишком универсальными (принимают любые типы данных), это нужно не всегда. Часто бывает лучше ограничиться несколькими типами данных. Это позволяет сделать ключевое слово `where`:
 
 ```csharp
-public class TemplateClass<T> where T: ???
+public class TemplateClass<T> where T : ???
 ```
 
 Здесь `???` может принимать одно из следующих значений:
@@ -193,8 +193,8 @@ public class TemplateClass<T> where T: ???
 
 ```csharp
 class TemplateClass<T, U>
-    where T: ???
-    where U: ???
+    where T : ???
+    where U : ???
 {
 // ...
 }
