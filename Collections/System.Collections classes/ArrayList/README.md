@@ -24,7 +24,7 @@ ArrayList myList = new ArrayList(){1, "hello",  3};
  - `Capacity` — свойство, позволяющее передать/получить максимально возможное количество элементов, которые может содержать данная коллекция;
  - `IsFixedSize` — свойство, которое указывает, имеет ли коллекция зафиксированный размер (ограничена ли коллекция с помощью `Capacity`).
 
-Подробнее на [Microsoft Docs](https://docs.microsoft.com/ru-ru/dotnet/api/system.collections.arraylist?view=netframework-4.7.2)
+Подробнее на [Microsoft Docs](https://docs.microsoft.com/dotnet/api/system.collections.arraylist).
 
 ## Полезные методы класса ArrayList:
 
@@ -36,11 +36,11 @@ ArrayList myList = new ArrayList(){1, "hello",  3};
  - `Contains()` — метод для определения существования в коллекции элемента в виде объекта, указанного в качестве аргумента;
  - `Insert()` — вставляет элемент в коллекцию ArrayList по указанному индексу.
 
-Подробнее на [Microsoft Docs](https://docs.microsoft.com/ru-ru/dotnet/api/system.collections.arraylist?view=netframework-4.7.2)
+Подробнее на [Microsoft Docs](https://docs.microsoft.com/dotnet/api/system.collections.arraylist).
 
 ## Возможности ArrayList
 
-Поскольку ArrayList реализует интерфейс IEnumerable, его можно перебирать с помощью foreach:
+Поскольку ArrayList реализует интерфейс `IEnumerable`, его можно перебирать с помощью foreach:
 
 ```csharp
 foreach(object i in myList){
