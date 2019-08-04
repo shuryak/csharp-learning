@@ -8,10 +8,14 @@
 
 (фиолетовые точки — мои действия в репозитории [csharp-learning](https://github.com/shuryak/csharp-learning)).
 
+## Связаться
+
+ВКонтакте: [vk.com/shooryak](https://vk.com/shooryak).
+
 ## Источники информации
 
  - Книга "[Библия C#. 3-е издание](http://www.bhv.ru/books/book.php?id=193958)", Михаил Флёнов.
  - [metanit.com](https://metanit.com/).
  - [Microsoft Docs](https://docs.microsoft.com/).
  
- 🙌
+🙌
