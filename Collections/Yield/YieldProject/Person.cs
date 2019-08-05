@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace IEnumerable_and_IEnumerator
+namespace YieldProject
 {
     class Person
     {
@@ -25,21 +25,17 @@ namespace IEnumerable_and_IEnumerator
             return Childrens.Count;
         }
 
-        public Person this[int index]
+        /*public Person this[int index]
         {
             get { return (Person)Childrens[index]; }
-        }
-
-        /* Foreign implementation
-        public IEnumerator GetEnumerator()
-        {
-            return Childrens.GetEnumerator();
-        }
-        */
+        }*/
 
         public IEnumerator GetEnumerator()
         {
-            return new PersonEnumerator(this);
+            foreach (Person p in Childrens)
+            {
+                yield return p;
+            }
         }
     }
 }

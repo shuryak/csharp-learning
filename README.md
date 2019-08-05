@@ -10,12 +10,13 @@
 
 ## Связаться
 
-ВКонтакте: [vk.com/shooryak](https://vk.com/shooryak).
+ - ВКонтакте: [vk.com/shooryak](https://vk.com/shooryak).
 
 ## Источники информации
 
  - Книга "[Библия C#. 3-е издание](http://www.bhv.ru/books/book.php?id=193958)", Михаил Флёнов.
  - [metanit.com](https://metanit.com/).
+ - [professorweb.ru](https://professorweb.ru/).
  - [Microsoft Docs](https://docs.microsoft.com/).
- 
+
 🙌
