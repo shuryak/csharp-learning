@@ -1,8 +1,8 @@
-﻿# Классы System.Collections
+﻿# Классы `System.Collections`
 
 Пространство имён `System.Collections` содержит классы простых [необощённых](https://github.com/shuryak/csharp-learning/tree/master/OOP/Generics) коллекций. Эти коллекции хранят элементы в виде объектов типа `Object`, т.е. в виде нетипизированных объектов.
 
-## Основные классы коллекций System.Collections
+## Основные классы коллекций `System.Collections`
 
  - `ArrayList` — коллекция, размер которой динамически увеличивается по мере добавления элементов;
  - `BitArray` — коллекция для хранения битовых значений (только `true` и `false`) в компактном виде;

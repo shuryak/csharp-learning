@@ -1,8 +1,8 @@
-# Классы System.Collections.Generic
+# Классы `System.Collections.Generic`
 
 Пространство имён `System.Collections.Generic` содержит классы простых [обощённых](https://github.com/shuryak/csharp-learning/tree/master/OOP/Generics) коллекций. Эти коллекции, в отличие от коллекций класса `System.Collections` (где элементы представлены типом `Object`), являются типизированными. Их типизиция возможна, потому что коллекции являются [обощёнными](https://github.com/shuryak/csharp-learning/tree/master/OOP/Generics), можно явно указать, для какого типа данных создаётся коллекция.
 
-## Основные классы коллекций System.Collections.Generic
+## Основные классы коллекций `System.Collections.Generic`
 
  - `List<T>` — коллекция в виде однонаправленного списка;
  - `LinkedList<T>` — коллекция в виде двунаправленного (двусвязного) списка, где каждый элемент хранит ссылку одновременно на следующий и предыдущий элемент в списке;
