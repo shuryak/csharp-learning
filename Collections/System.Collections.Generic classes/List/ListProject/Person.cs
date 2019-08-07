@@ -1,4 +1,4 @@
-﻿namespace HashtableProject
+﻿namespace ListProject
 {
     class Person
     {

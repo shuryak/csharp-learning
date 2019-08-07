@@ -6,7 +6,7 @@
 
 Класс `Hashtable` реализует интерфейсы `ICollection`, `IDictionary`, `IEnumerable`, `ICloneable`, `IDeserializationCallback`, `ISerializable`.
 
-## Методы Hashtable
+## Основные методы Hashtable
 
 Основные методы класса `Hashtable`:
 
