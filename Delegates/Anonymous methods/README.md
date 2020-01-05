@@ -29,7 +29,7 @@ static void Main(string[] args)
 }
 ```
 
-## Анонимный метод в качестве параметра
+## Анонимный метод в качестве аргумента
 
 ```csharp
 ShowMessage("Another string to print...", delegate(string mes)
